@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Robert Sichomba</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #1c242b;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #0fdff1 !important;
+        }
+
+        .nav-link:hover {
+            color: #f2f6f4 !important;
+        }
+
+        .profile-header {
+            background: linear-gradient(to right, #52cfe2, #25c7e0);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .skills-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .skills-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline {
+            border-left: 3px solid #3498db;
+            padding-left: 2rem;
+            margin-left: 1rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2.2rem;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #29b5d1;
+            border-radius: 50%;
+        }
+
+        .social-links a {
+            color: #092f09;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #10d127;
+        }
+
+        .cv-download {
+            background: #130590;
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none !important;
+        }
+
+        .cv-download:hover {
+            background: #10d127;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Robert Sichomba</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="container">
+            <img src="path_to_your_profile_picture.jpg" alt="Profile Picture" class="profile-picture">
+            <h1 class="display-4 mb-3">Robert Sichomba</h1>
+            <p class="lead">Physicist | Data Science and Exploration Geologist | Python Developer</p>
+            <p class="mb-4">
+                I am a dedicated developer, exploration geologist, and data scientist passionate about harnessing data-driven solutions to tackle complex challenges and drive innovation in Mineral Exploration, Data science, and Education. 
+            </p>
+            <div class="social-links mb-4">
+                <a href="https://www.linkedin.com/in/robert-sichomba" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:sichombarobertbob@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+260974609823">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <a href="Robert_SICHOMBA_Curriculum_Vitae_1 (1).pdf" download class="cv-download">
+                <i class="fas fa-download me-2"></i>Download CV
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Professional Summary -->
+            <div class="col-lg-8 mb-4">
+                <div class="skills-card">
+                    <h3 class="mb-4">Professional Profile</h3>
+                    <p class="lead">
+                        Highly motivated physicist and data scientist with 2+ years experience in laboratory research, 
+                        data analytics, and IT support. Passionate about solving complex problems through data-driven 
+                        approaches and mentoring future scientists.
+                    </p>
+                </div>
+
+                <!-- Current Research Links -->
+                <div class="skills-card mt-4">
+                    <h3 class="mb-4">Current Research</h3>
+                    <ul>
+                        <li><a href="https://link-to-your-research1.com" target="_blank">Data Analytics for Renewable Energy Systems</a></li>
+                        <li><a href="https://link-to-your-research2.com" target="_blank">Bayesian Inference in Water Quality Analysis</a></li>
+                        <li><a href="https://link-to-your-research3.com" target="_blank">Exploration of Geophysical Data Using Machine Learning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="skills-card mt-4">
+                    <h3 class="mb-4">Career Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>MSc Data Science & Exploration Geology</h5>
+                            <p class="text-muted">Copperbelt University | 2024-2026</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Laboratory Assistant & Tutor</h5>
+                            <p class="text-muted">Copperbelt University Physics Department | 2021-2023</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Data Science Intern</h5>
+                            <p class="text-muted">Zambia Statistics Agency | 2022 Census Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="col-lg-4">
+                <div class="skills-card">
+                    <h3 class="mb-4">Technical Expertise</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fab fa-python me-2"></i>
+                            Python & Machine Learning
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-database me-2"></i>
+                            SQL & Data Analysis
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-chart-bar me-2"></i>
+                            Tableau & Data Visualization
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-flask me-2"></i>
+                            Laboratory Research
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-network-wired me-2"></i>
+                            IT Support & Networking
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="social-links mb-3">
+                <a href="https://www.linkedin.com/in/robert-sichomba" target="_blank" class="text-white">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="text-white mx-4">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="mailto:sichombarobertbob@gmail.com" class="text-white">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Robert Sichomba. All rights reserved.</p>
+            <p>Lusaka, Zambia | +260 974 609 823</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

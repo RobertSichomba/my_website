@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Robert Sichomba</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #1c242b;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #0eafbd !important;
+        }
+
+        .nav-link:hover {
+            color: #dee2e4 !important;
+        }
+
+        .contact-header {
+            background: linear-gradient(to right, #5dc2e1, #3ba3c2);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #10d127;
+            border-color: #10d127;
+        }
+
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #10d127;
+        }
+
+        .input-icon {
+            position: relative;
+        }
+
+        .input-icon i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #3498db;
+        }
+
+        .input-icon input {
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Robert Sichomba</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <div class="contact-header">
+        <div class="container">
+            <h1 class="display-4 mb-3">Let's Connect!</h1>
+            <p class="lead">Have a question or want to collaborate? Reach out below</p>
+        </div>
+    </div>
+
+    <!-- Contact Content -->
+    <div class="container">
+        <div class="contact-form">
+            <form action="#" method="POST">
+                {% csrf_token %}
+                
+                <!-- Success/Error Messages -->
+                {% if messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                {% endif %}
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" class="form-control" id="name" name="name" 
+                                   placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" class="form-control" id="email" name="email" 
+                                   placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-icon">
+                            <i class="fas fa-comment"></i>
+                            <textarea class="form-control" id="message" name="message" 
+                                      rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
+                    <h5>Location</h5>
+                    <p>1558B Lusaka, Zambia</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-envelope fa-2x mb-3"></i>
+                    <h5>Email</h5>
+                    <p>sichombarobertbob@gmail.com</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-phone fa-2x mb-3"></i>
+                    <h5>Phone</h5>
+                    <p>+260 974 609 823</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links mb-3">
+                <a href="https://www.linkedin.com/in/robert-sichomba" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="mx-4">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:sichombarobertbob@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 Robert Sichomba. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form Validation Script -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Please enter a valid email address');
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
